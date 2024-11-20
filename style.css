@@ -1,0 +1,277 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: poppins;
+}
+
+/* Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #95a5a6;
+    padding: 30px;
+    margin-top: 0%;
+}
+
+header {
+    /* background: #333; */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+}
+
+header h1{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+/* Default styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Elemen di kiri dan kanan */
+    align-items: center;
+    position: fixed; /* Agar navbar tetap stay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #101c1d;
+    z-index: 1000;
+}
+
+.Ica {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; /* Hilangkan margin default */
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 15px; /* Spasi antar item menu */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+    width: 100%;
+}
+
+section about {
+    margin-top: 60px; /* Agar konten tidak tertutup oleh navbar */
+    padding: 20px;
+    height: 800px; /* Konten panjang untuk menguji efek sticky */
+    background-color: #f4f4f4;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Tumpuk menu secara vertikal */
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-menu li {
+        margin: 10px 0; /* Spasi antar item menu */
+    }
+
+    .navbar a {
+        font-size: 18px; /* Sedikit lebih besar untuk layar kecil */
+        padding: 10px 20px;
+    }
+}
+
+a {
+    color: rgb(31, 22, 83);
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+    margin-right: 100px;
+    flex: 1;
+    justify-content: right;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+section {
+    padding: 50px;
+    margin: 100px 0;
+    background: #7f8c8d; 
+    border-radius: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start; /* Menyelaraskan gambar dengan teks */
+    gap: 100px; /* Jarak antara gambar dan teks */
+}
+
+.foto {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    margin-bottom: 30px;
+    border-radius: 20px; /* Sudut melengkung lebih kecil untuk kesan profesional */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+}
+
+p {
+    margin: 2px 0; /* Menambahkan sedikit jarak antar paragraf */
+    font-size: 16px; /* Ukuran teks nyaman dibaca */
+    color: #0c0c0c; /* Warna teks */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Kontainer flex */
+.content {
+    display: flex; /* Gunakan Flexbox untuk tata letak horizontal */
+    justify-content: center; /* Tempatkan elemen di tengah secara horizontal */
+    align-items: center; /* Tempatkan elemen di tengah secara vertikal */
+    gap: 55px; /* Tambahkan jarak antar gambar jika diperlukan */
+}
+
+/* Gaya umum untuk semua gambar */
+.crud, .uang {
+    width: 100%; /* Atur gambar supaya masing-masing memenuhi 45% lebar kontainer */
+    max-width: 400px; /* Batasi ukuran maksimal */
+    height: auto; /* Jaga proporsi gambar */
+    
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease; /* Animasi hover */
+}
+.laravel {
+    width: 100%; /* Gambar ketiga memenuhi seluruh lebar kontainer */
+    max-width: 400px;
+    height: auto;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px  rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.figma  {
+    width: 100%; /* Gambar ketiga memenuhi seluruh lebar kontainer */
+    max-width: 400px;
+    height: auto;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px  rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+
+/* Efek hover untuk semua gambar */
+.content img:hover {
+    transform: scale(1.05); /* Perbesar gambar sedikit saat di-hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Perbesar bayangan */
+}
+
+
+.Contact a.whatsapp {
+    color: #25d366; /* Warna tautan WhatsApp */
+    text-decoration: none; /* Menghapus garis bawah tautan */
+}
+
+.Contact a.whatsapp:hover {
+    text-decoration: underline; /* Menampilkan garis bawah saat dihover */
+}
+.contact a.email {
+    color: #8db8e6; /* Warna tautan email */
+    text-decoration: none; /* Menghapus garis bawah tautan */
+}
+
+.contact a.email:hover {
+    text-decoration: underline; /* Menampilkan garis bawah saat dihover */
+}
+
+/* Kontainer untuk gambar projek */
+.Projek {
+    padding: 20px; /* Padding untuk ruang sekitar */
+}
+
+/* Tata letak untuk kontainer gambar */
+.content {
+    display: flex; /* Menggunakan Flexbox */
+    flex-wrap: wrap; /* Membungkus gambar ke baris baru jika ruang tidak cukup */
+    justify-content: space-between; /* Membuat jarak antar gambar */
+    gap: 20px; /* Jarak antar elemen */
+}
+
+/* Gaya umum untuk gambar */
+.content img {
+    width: calc(50% - 20px); /* Setiap gambar mengisi 50% lebar kontainer, minus jarak antar gambar */
+    max-width: 400px; /* Batasi ukuran maksimal gambar */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+/* Responsif untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Susun gambar dalam kolom pada layar kecil */
+        gap: 20px; /* Jarak lebih besar antar gambar */
+    }
+
+    .content img {
+        width: 100%; /* Gambar memenuhi lebar kontainer */
+        max-width: none; /* Menghilangkan batasan lebar gambar pada perangkat kecil */
+    }
+}
+
