@@ -87,7 +87,6 @@ header h1{
 .navbar a:focus::after {
     width: 100%;
 }
-
 section about {
     margin-top: 60px; /* Agar konten tidak tertutup oleh navbar */
     padding: 20px;
@@ -99,7 +98,9 @@ section about {
 /* Responsive styles */
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: row; /* Tumpuk menu secara vertikal */
+            display: flex; /* Mengatur elemen anak secara horizontal */
+            justify-content: center; /* Menempatkan elemen di tengah secara horizontal */
+            gap: 20px; /* Memberikan jarak antar elemen */ 
     }
 
     .navbar-menu {
@@ -112,8 +113,11 @@ section about {
     }
 
     .navbar a {
-        font-size: 18px; /* Sedikit lebih besar untuk layar kecil */
-        padding: 10px 20px;
+            text-decoration: none;
+            color: rgb(250, 246, 246);
+            padding: 10px 20px;
+            font-size: 18px; /* Sedikit lebih besar untuk layar kecil */
+    
     }
 }
 
@@ -153,7 +157,7 @@ section {
 .content {
     display: flex;
     align-items: flex-start; /* Menyelaraskan gambar dengan teks */
-    gap: 100px; /* Jarak antara gambar dan teks */
+    gap: 1000px; /* Jarak antara gambar dan teks */
 }
 
 .foto {
@@ -168,7 +172,7 @@ section {
 p {
     margin: 2px 0; /* Menambahkan sedikit jarak antar paragraf */
     font-size: 16px; /* Ukuran teks nyaman dibaca */
-    color: #0c0c0c; /* Warna teks */
+    color: #131212; /* Warna teks */
 }
 
 footer {
